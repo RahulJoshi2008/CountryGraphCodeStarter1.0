@@ -11,18 +11,36 @@ public class Country {
         this.continent = continent;
     }
 
-    public String getName() { return name; }
-    public long getPopulation() { return population; }
-    public String getContinent() { return continent; }
+    public String getName() { 
+        return name; 
+    }
 
-    public void setName(String name) { this.name = name; }
-    public void setPopulation(long population) { this.population = population; }
-    public void setContinent(String continent) { this.continent = continent; }
+    public long getPopulation() { 
+        return population; 
+    }
+
+    public String getContinent() { 
+        return continent; 
+    }
+
+    public void setName(String name) { 
+        this.name = name; 
+    }
+
+    public void setPopulation(long population) { 
+        this.population = population; 
+    }
+
+    public void setContinent(String continent) { 
+        this.continent = continent; 
+    }
 
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
+
         if (obj == null || getClass() != obj.getClass()) return false;
+
         Country country = (Country) obj;
         return Objects.equals(name, country.name);
     }
@@ -32,7 +50,7 @@ public class Country {
         return Objects.hash(name);
     }
 
-    // Override toString to print the name cleanly
+    
     @Override
     public String toString() {
         return name;
